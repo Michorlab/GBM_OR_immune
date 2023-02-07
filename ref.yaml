@@ -1,0 +1,27 @@
+#REF.yaml - File to contain paths to static reference files that Chips requires
+#           for its analysis.
+# NOTE: these are already pre-filled for hg19 and mm9 (if you use the publicly
+#       available files found here: <link to chips static references)
+# NOTE: organized by assemblies
+#
+# !VERY IMPORTANT: you can OVERRIDE any of these values in config.yaml!
+
+hg38:
+  bwa_index: ./ref_files/hg38/bwa_gdc/GRCh38.d1.vd1.CIDC.fa
+  genome_fasta: ./ref_files/hg38/bwa_gdc/GRCh38.d1.vd1.CIDC.fa
+  vep_fasta: ./ref_files/hg38/bwa_gdc/GRCh38.d1.vd1.CIDC.fa
+
+  dbsnp: ./ref_files/hg38/snp/Homo_sapiens_assembly38.dbsnp138.vcf
+  Mills_indels: ./ref_files/hg38/snp/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz
+  G1000_indels: ./ref_files/hg38/snp/1000G_phase1.snps.high_confidence.hg38.vcf.gz
+  CDS_Bed_input: ./ref_files/hg38/gencode27.canonical.bed
+  vep_data: ./ref_files/hg38/vep
+  vep_plugins: ./ref_files/hg38/vep/VEP_plugins
+  vep_synonyms: ./ref_files/hg38/vep/homo_sapiens/91_GRCh38/chr_synonyms.txt
+  vep_custom_enst: ./ref_files/hg38/vep/myc_isoform_overrides_uniprot
+  vep_filter: ./ref_files/hg38/vep/ExAC_nonTCGA.r0.3.1.sites.vep.vcf.gz
+  vep_assembly: GRCh38
+
+
+  #copynumber
+  cnvkit: ./ref_files/hg38/cnvkit/refFlat.gencode.v27.wGeneNames.txt

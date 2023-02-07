@@ -1,0 +1,39 @@
+name: wgs
+channels:
+- conda-forge
+- bioconda
+- biobuilds
+- aroth85
+- plotly
+- defaults
+dependencies:
+#GENERAL
+- snakemake>=5.30.1
+- samtools>=1.12
+- python==3.6.7 # later pythons dont support tenserflow 2.2.2 which is required by pvactools
+#- r>=3.4.1
+- numpy
+- scipy
+- slacker #for slack channel logging
+
+
+#align_*.snakefile
+- bwa>=0.7.15
+- sambamba>=0.6.6
+
+# BELOW are required by WES calling vcf
+- perl-bioperl #required by vcf2maf
+- perl-dbi
+- perl-vcftools-vcf=0.1.16=pl526_2 # vcf environment is not comapatable with this
+
+#cidc-vs
+- matplotlib<=3.0.3 # needed for multiqc
+- pybedtools
+
+
+
+#cnvkit
+- cnvkit
+
+# somatic and rna modules
+- bcftools
