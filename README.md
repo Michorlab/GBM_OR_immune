@@ -17,12 +17,12 @@ Content
 -------
 * `/FISH_diversity/`: materials to reproduce the results related to FISH data (Figs. 2,3,4,5 in manuscript): input FISH data, Python code and relevant metadata and annotation tables. Note that the file mmc3.xlsx was too large to be uploaded to GitHub, and can be downloaded from [Zenodo](https://zenodo.org/record/7606465#.Y-KFwC-B2NE) instead. For questions related to these analyses, please reach out to Michalina Janiszewska (email: mjaniszewska@scripps.edu), the lead contact of the study.
 * `/WGS/`: materials to reproduce the analyses of the Whole Genome Sequencing data introduced in this manuscript: bash and Python scripts, as well as Snakemake files. For questions related to these analyses, please reach out to [Aashna Jhaveri](https://github.com/Aashna01) or [Simona Cristea](https://github.com/csimona).
-* `/scRNAseq/`: materials to reproduce the single cell RNA sequncing (scRNAseq) analyses in this paper, based on two publicly available datasets. subfolder `/code/` contains the R code used, `/plots/` contains the generated plots and `/tables/` the markers used for cell type classification. The preprocessed data used as input for these scripts needs to be downloaded from [Zenodo](https://zenodo.org/record/7606465#.Y-KFwC-B2NE), de-compressed, and placed in the folder 'data'.
+* `/scRNAseq/`: materials to reproduce the single cell RNA sequncing (scRNAseq) analyses in this paper, based on two publicly available datasets. subfolder `/code/` contains the R code used, `/plots/` contains the generated plots and `/tables/` the markers used for cell type classification. The preprocessed data used as input for these scripts needs to be downloaded from [Zenodo](https://zenodo.org/record/7606465#.Y-KFwC-B2NE), de-compressed, and placed in the subfolder 'data'.
 
 
 Data
 -------
-Whole Genome Sequencing data can be downloaded from [dbGaP](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs003100.v1.p1)
+Whole Genome Sequencing data can be downloaded from [dbGaP](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs003100.v1.p1).
 
 Preprocessed RDS objects can be downloaded from [Zenodo](https://zenodo.org/record/7606465#.Y-KFwC-B2NE).
 
