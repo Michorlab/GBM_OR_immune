@@ -1,0 +1,51 @@
+#NOTE: you won't typically have to change the following two lines!
+metasheet: 'metasheet.csv'
+ref: "wgs/ref.yaml"
+
+#Path to sentieon binary
+sentieon_path: "/michorlab/aashna/WES/sentieon/sentieon-genomics-201808.05/bin"
+#Tell us what assembly to use (!! MUST be defined in chips/ref.yaml !!)
+assembly: hg38
+
+#effective_size: # of base-pairs covered in target regions
+effective_size: 30000000
+
+# Default: tumor_only: False
+tumor_only: True
+
+# DEFINE the samples- each sample should have a name, e.g. SAMPLE1
+# and a path to the input file, e.g. data/sample1.fastq.gz
+# VALID INPUTS: fastq, fastq.gz, bam
+# NOTE: for PAIRED-END fastq/fastq.gz, give both pairs to the sample:
+# SAMPLE_1_PE:
+#   - data/sample1_pair1.fastq
+#   - data/sample1_pair2.fastq
+# WARNING: DO not mix Paired-END and Single-End samples!!!
+# ALSO: having the string "rep" or '.' in your sample name will throw an ERROR
+# '.' causes Rscripts chop off names; and it's used as replicate splitter
+samples:
+  MSMC_GBM_1:
+    - data/1_MSMC_GBM-1_S731-S571_L001-L002/MSMC-GBM-1_S1_R1_001.fastq.gz
+    - data/1_MSMC_GBM-1_S731-S571_L001-L002/MSMC-GBM-1_S1_R2_001.fastq.gz
+  MSMC_GBM_4:
+    - data/2_MSMC_GBM-4_S789-S579_L001-L002/MSMC-GBM-4_S2_R1_001.fastq.gz
+    - data/2_MSMC_GBM-4_S789-S579_L001-L002/MSMC-GBM-4_S2_R2_001.fastq.gz
+  MSMC_GBM_9:
+    - data/3_MSMC_GBM-9_S787-S588_L001-L002/MSMC-GBM-9_S3_R1_001.fastq.gz
+    - data/3_MSMC_GBM-9_S787-S588_L001-L002/MSMC-GBM-9_S3_R2_001.fastq.gz
+  MSMC_GBM_11:
+    - data/4_MSMC_GBM-11_S703-S539_L001-L002/MSMC-GBM-11_S4_R1_001.fastq.gz
+    - data/4_MSMC_GBM-11_S703-S539_L001-L002/MSMC-GBM-11_S4_R2_001.fastq.gz
+  MSMC_GBM_15:
+    - data/5_MSMC_GBM-15_S776-S537_L001-L002/MSMC-GBM-15_S5_R1_001.fastq.gz
+    - data/5_MSMC_GBM-15_S776-S537_L001-L002/MSMC-GBM-15_S5_R2_001.fastq.gz
+  MSMC_GBM_17:
+    - data/6_MSMC_GBM-17_S782-S528_L001-L002/MSMC-GBM-17_S6_R1_001.fastq.gz
+    - data/6_MSMC_GBM-17_S782-S528_L001-L002/MSMC-GBM-17_S6_R2_001.fastq.gz
+
+
+#The following are optional meta information that will be stored in the report
+#wgs_run_info:
+#  wgs_commit: e4b875
+#  wgs_ref_snapshot: wes-human-ref-ver1-3
+#  wgs_image: wes-ver2-1
